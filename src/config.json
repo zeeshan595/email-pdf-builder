@@ -1,0 +1,8 @@
+{
+  "urls": ["https://www.scottishpower.co.uk/tils/"],
+  "includeLandingPage": true,
+  "snapshotRenderDelay": 0,
+  "timeout": 20000,
+  "waitForLandingPageCallback": true,
+  "sendPrintCommand": true
+}

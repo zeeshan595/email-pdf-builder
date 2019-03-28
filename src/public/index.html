@@ -1,0 +1,79 @@
+<html>
+  <head>
+    <title>PDF Proofing</title>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+  </head>
+  <body>
+    <div id="modal">
+      <div id="modalContainer">
+        <p id="modalBody"></p>
+        <div id="modalContent"></div>
+        <div id="modalbuttons"></div>
+      </div>
+    </div>
+    <div class="header">
+      <div class="dragable">PDF Proofing Builder</div>
+      <div class="toolbar">
+        <button
+          onclick="onMinimizeButtonClick();"
+          class="toolbar-button orange"
+        ></button>
+        <button
+          onclick="onCloseButtonClick();"
+          class="toolbar-button red"
+        ></button>
+      </div>
+    </div>
+    <div class="content">
+      <img
+        alt="scottish Power"
+        src="https://www.scottishpower.co.uk/assets/images/global/logo/sp_logo.jpg"
+        class="logo"
+      />
+      <div class="m5">
+        <button id="settings-button" onclick="onSettingsButtonClick();">
+          Settings
+        </button>
+        <button id="view-selected-files" onclick="onViewSelectedFilesClick();">
+          View Selected Files
+        </button>
+      </div>
+      <div class="m5">
+        <button id="browse-button" onclick="onBrowsebuttonClick();">
+          Browse Emails
+        </button>
+        <button
+          id="convert-to-html-button"
+          onclick="onConvertToHTMLClick();"
+          style="display: none;"
+        >
+          Convert to HTML
+        </button>
+        <button
+          id="screen-shots-button"
+          onclick="onGetScreenShotsClick();"
+          style="display: none;"
+        >
+          Get Screen Shots
+        </button>
+        <button
+          id="to-single-pdf-button"
+          onclick="onCreatePDFClick();"
+          style="display: none;"
+        >
+          Create PDF File
+        </button>
+      </div>
+      <progress
+        class="progress-bar"
+        id="progress-bar"
+        value="0"
+        max="100"
+      ></progress>
+      <br />
+      <div id="log-area" class="log-area"></div>
+    </div>
+    <!-- SCRIPTS -->
+    <script src="mainWindow.js"></script>
+  </body>
+</html>

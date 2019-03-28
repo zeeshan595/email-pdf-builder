@@ -1,0 +1,45 @@
+{
+  "name": "pdf-proofing",
+  "version": "1.0.0",
+  "repository": {
+    "url": "https://github.iberdrola.eu-fr.bluemix.net/zabid-scottishpower-com/email-pdf-proofing"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp && electron build",
+    "clean": "rm -rf build",
+    "build": "echo \"Please use 'build-mac', 'build-linux' or 'build-windows'\"",
+    "build-mac": "gulp && cd build && npm install && electron-packager . --overwrite --platform=darwin --arch=x64 --out=release-builds/mac",
+    "build-linux": "gulp && cd build && npm install && electron-packager . --overwrite --platform=linux --arch=x64 --out=release-builds/linux",
+    "build-windows": "gulp && cd build && npm install && electron-packager . --overwrite --platform=win32 --arch=ia32 --out=release-builds/windows"
+  },
+  "dependencies": {
+    "eml-format": "^0.5.0",
+    "npm": "^6.8.0",
+    "phantom-html-to-pdf": "^0.5.6",
+    "phantomjs-prebuilt": "^2.1.16",
+    "typescript": "^3.2.1",
+    "unescape": "^1.0.1",
+    "webshot": "^0.18.0"
+  },
+  "devDependencies": {
+    "electron": "^3.0.10",
+    "electron-packager": "^12.2.0",
+    "gulp": "^4.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-typescript": "^5.0.0"
+  },
+  "build": {
+    "appId": "pdf.proofing.builder",
+    "mac": {
+      "category": "application"
+    }
+  },
+  "files": [
+    "index.js",
+    "index.html",
+    "window.js",
+    "main.css"
+  ],
+  "author": "Zeeshan Abid"
+}
