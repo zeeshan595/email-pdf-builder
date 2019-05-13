@@ -23,7 +23,7 @@ const onBrowsebuttonClick = () => {
   //ask user to select (multiple) email files
   const emails: string[] = remote.dialog.showOpenDialog({
     properties: ["openFile", "multiSelections"],
-    filters: [{ name: "Email", extensions: ["eml"] }]
+    filters: [{ name: "Email (.eml, .msg)", extensions: ["eml", "msg"] }, { name: "All", extensions: ["*"] }]
   });
   //if the user selects emails create folders for caching each email
   if (!emails || emails.length <= 0) return;

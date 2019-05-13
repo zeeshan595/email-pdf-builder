@@ -14,6 +14,7 @@
     "build-windows": "gulp && cd build && npm install && electron-packager . --overwrite --platform=win32 --arch=ia32 --out=release-builds/windows"
   },
   "dependencies": {
+    "@freiraum/msgreader": "^1.1.1",
     "eml-format": "^0.5.0",
     "npm": "^6.8.0",
     "phantom-html-to-pdf": "^0.5.6",
