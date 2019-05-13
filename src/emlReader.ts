@@ -11,7 +11,6 @@ module.exports = (file: string) => {
       case "msg":
         const fileContent = fs.readFileSync(file);
         const textMsg: any = new MSGReader(fileContent);
-        console.log(textMsg);
         const encodedHtml = htmlEncoder(textMsg.getFileData().body);
         resolve(encodedHtml);
         break;
